@@ -7,7 +7,6 @@
   "author": "Benjamin Macher <benjamin.dev@icloud.com>",
   "license": "MIT",
   "scripts": {
-    "preinstall": "ts-node scripts/npm-pre-install-hook.ts",
     "postinstall": "ts-node scripts/npm-post-install-hook.ts",
     "start": "ts-node src/index.ts",
     "lint": "eslint ./",
