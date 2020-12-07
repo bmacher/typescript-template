@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    /* Basic */
+    "target": "ES2018",
+    "module": "CommonJS",
+    "allowJs": true,
+    "checkJs": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "outDir": "dist/",
+    "rootDir": "src/",
+    "newLine": "lf",
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {},
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+    "charset": "utf8",
+    "esModuleInterop": true,
+    /* Source Map Options */
+    "inlineSources": true
+  }
+}
