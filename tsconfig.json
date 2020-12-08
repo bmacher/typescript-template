@@ -3,12 +3,10 @@
     /* Basic */
     "target": "ES2018",
     "module": "CommonJS",
-    "allowJs": true,
-    "checkJs": true,
+    "allowJs": false,
+    "checkJs": false,
     "resolveJsonModule": true,
-    "sourceMap": true,
-    "outDir": "dist/",
-    "rootDir": "src/",
+    "inlineSourceMap": true,
     "newLine": "lf",
     /* Strict Type-Checking Options */
     "strict": true,
@@ -33,5 +31,9 @@
     "esModuleInterop": true,
     /* Source Map Options */
     "inlineSources": true
-  }
+  },
+  "include": [
+    "scripts",
+    "src"
+  ]
 }
