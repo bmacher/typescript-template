@@ -14,10 +14,13 @@
  *  ]
  */
 
+const { resolve } = require('path');
+
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  rootDir: './src',
+  rootDir: resolve('src'),
+  coverageDirectory: resolve('coverage'),
   testMatch: [
     '**/?(*.)+(spec|test).ts',
   ],

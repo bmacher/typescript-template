@@ -15,7 +15,8 @@
     "lint:fix": "eslint . --fix",
     "test": "jest",
     "test:verbose": "jest --verbose",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "npm run test:clean && jest --coverage",
+    "test:clean": "rm -rf coverage"
   },
   "devDependencies": {
     "@jest/globals": "^26.6.2",
