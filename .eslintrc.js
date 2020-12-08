@@ -51,8 +51,7 @@ module.exports = {
   ],
 
   env: {
-    node: true,
-    jest: true,
+    node: true
   },
 
   settings: {
