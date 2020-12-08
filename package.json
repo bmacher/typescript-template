@@ -9,6 +9,8 @@
   "scripts": {
     "postinstall": "ts-node scripts/npm-post-install-hook.ts",
     "start": "ts-node src/index.ts",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix",
     "test": "jest",
