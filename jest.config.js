@@ -1,10 +1,10 @@
 /**
  * @author Benjamin Macher
  * @description Jest config for TypeScript projects.
- * 
+ *
  * @dependencies
  * yarn add --dev jest @jest/globals ts-jest
- * 
+ *
  * @commands
  * package.json
  * "scripts": [
@@ -19,6 +19,6 @@ module.exports = {
   testEnvironment: 'node',
   rootDir: './src',
   testMatch: [
-    '**/?(*.)+(spec|test).ts'
+    '**/?(*.)+(spec|test).ts',
   ],
 };

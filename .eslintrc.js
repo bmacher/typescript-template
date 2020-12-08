@@ -12,12 +12,12 @@
  *   eslint-import-resolver-typescript \
  *   @typescript-eslint/eslint-plugin \
  *   @typescript-eslint/parser
- * 
- * This config uses extends: ['airbnb-typescript/base'] so that it doesn't 
- * involve React. However there will still be the warning with peerDependencies 
- * when installing the dependencies which can be ignored. 
+ *
+ * This config uses extends: ['airbnb-typescript/base'] so that it doesn't
+ * involve React. However there will still be the warning with peerDependencies
+ * when installing the dependencies which can be ignored.
  * Referencing issue: https://github.com/iamturns/eslint-config-airbnb-typescript/issues/6
- * 
+ *
  * @commands
  * package.json
  * "scripts": [
@@ -31,7 +31,7 @@ module.exports = {
 
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: "./tsconfig.json",
+    project: './tsconfig.json',
     ecmaVersion: 2018,
     ecmaFeatures: {
       impliedStrict: true,
@@ -51,19 +51,19 @@ module.exports = {
   ],
 
   env: {
-    node: true
+    node: true,
   },
 
   settings: {
     'import/resolver': {
       typescript: {
         // To resolve local depedencies under paths: {}
-        project: ".",
+        project: '.',
       },
       // To resolve @types like aws-lambda
       node: {
-        "extensions": [".js", ".ts", ".tsx", ".d.ts"],
-        "paths": ["node_modules/", "node_modules/@types/"]
+        extensions: ['.js', '.ts', '.tsx', '.d.ts'],
+        paths: ['node_modules/', 'node_modules/@types/'],
       },
     },
   },
@@ -72,50 +72,50 @@ module.exports = {
     // Default exports can lead to different names in import
     // whereas import with destructuring not.
     'import/prefer-default-export': 'off',
-    
+
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-continue': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    
+
     // Enable within aws-cdk projects
     // "no-new": "off",
-    
+
     // Functional style prefered: map, reduce, Object.entries(), ...
     'no-restricted-syntax': [
       'off',
       { selector: 'ForInStatement' },
       { selector: 'ForOfStatement' },
     ],
-    
-    "@typescript-eslint/naming-convention": [
-      "error",
+
+    '@typescript-eslint/naming-convention': [
+      'error',
       {
         // No 'I' prefix for interfaces
         // Guideline by TypeScript for contributers.
         // https://github.com/microsoft/TypeScript/wiki/Coding-guidelines#names
-        "selector": "interface",
-        "format": ["PascalCase"],
-        "custom": {
-          "regex": "^[^I]",
-          "match": true
+        selector: 'interface',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^[^I]',
+          match: true,
         },
       },
     ],
   },
-overrides: [
+  overrides: [
     {
-      files: "scripts/**/*.ts",
+      files: 'scripts/**/*.ts',
       rules: {
         // To import dev dependencies in scripts/*
-        "import/no-extraneous-dependencies": "off"
-      }
+        'import/no-extraneous-dependencies': 'off',
+      },
     },
     {
-      files: "**/?(*\.)+(spec|test).ts",
+      files: '**/?(*\.)+(spec|test).ts',
       rules: {
         // To import dev dependencies in tests (e.g. @jest/globals)
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
-      }
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      },
     },
   ],
-}
+};
