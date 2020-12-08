@@ -1,4 +1,6 @@
 ![Node CI](https://github.com/bmacher/typescript-template/workflows/Node%20CI/badge.svg)
+[![GitHub release](https://img.shields.io/github/release/bmacher/typescript-template.svg)](https://GitHub.com/bmacher/typescript-template/releases/)
+[![GitHub license](https://img.shields.io/github/license/bmacher/typescript-template.svg)](https://github.com/bmacher/typescript-template/blob/master/LICENSE)
 
 (&uarr; Adapt path to your repository!)
 
