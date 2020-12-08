@@ -89,3 +89,11 @@ There is also a badge that shows the status for the worklow (see line 1).
 
 How to remove:
   - delete `.github/workflows/node-ci-yml`
+
+### VS Code settings
+
+There are some settings and recommendations of extensions to setup your [VS Code](https://code.visualstudio.com/) properly for this repository. 
+
+How to remove:
+
+  - delete `.vscode`
