@@ -1,18 +1,18 @@
 {
-  "name": "github-typescript-template",
+  "name": "typescript-template",
   "version": "1.0.0",
   "description": "This is a template for TypeScript related projects.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "repository": "https://github.com/bmacher/github-typescript-template.git",
-  "author": "Benjamin Macher <benjamin.dev@icloud.com>",
+  "author": "Benjamin Macher",
   "license": "MIT",
   "scripts": {
     "postinstall": "ts-node scripts/npm-post-install-hook.ts",
     "start": "ts-node src/index.ts",
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
-    "lint": "eslint ./",
-    "lint:fix": "eslint ./ --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "jest",
     "test:verbose": "jest --verbose",
     "test:coverage": "jest --coverage"
