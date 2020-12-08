@@ -13,6 +13,9 @@ import { resolve } from 'path';
 import { readFileSync } from 'fs';
 import * as shell from 'shelljs';
 import * as chalk from 'chalk';
+// Ignore: Could not find a declaration file for module 'eslint'.
+// To avoid extra devDependvies for scripts.
+// @ts-expect-error
 import * as eslint from 'eslint';
 import * as jest from 'jest';
 
@@ -66,7 +69,7 @@ async function gitPrePushHook() {
 
     const lintResult = await linter
       .lintFiles(rootPath)
-      .catch((err) => {
+      .catch((err: Error) => {
         error(err);
         blankLine();
         error(chalk.red('Executing eslint failed. Make sure that it runs properly!'));
@@ -77,7 +80,7 @@ async function gitPrePushHook() {
       });
 
     const filesWithError = lintResult
-      .filter(({ errorCount }) => errorCount > 0)
+      .filter(({ errorCount }: { errorCount: number }) => errorCount > 0)
       .length;
 
     if (filesWithError > 0) {
