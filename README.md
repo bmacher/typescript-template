@@ -92,6 +92,14 @@ There is also a badge that shows the status for the worklow (see line 1).
 How to remove:
   - delete `.github/workflows/node-ci-yml`
 
+### Dependabot
+
+[Dependabot](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/keeping-your-dependencies-updated-automatically) is used to keep dependencies automatically up to date. It creates a pull request for each bump and (should) resolve conflicts by itself. You could also add a workflow that comments with "@dependedabot merge" when the PR has no conflicts and can be merged.
+
+How to remove:
+
+  - delete `.github/dependabot.yml`
+
 ### VS Code settings
 
 There are some settings and recommendations of extensions to setup your [VS Code](https://code.visualstudio.com/) properly for this repository. 
