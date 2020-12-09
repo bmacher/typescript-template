@@ -6,7 +6,7 @@ on:
     branches: [master]
 
 jobs:
-  lint-and-test:
+  node-ci:
     runs-on: ubuntu-latest
 
     steps:
