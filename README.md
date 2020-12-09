@@ -12,6 +12,15 @@ Found some stuff to fix or improve? Please fork and create a pull request or sim
 
 ## Features
 
+  - [Yarn](#yarn)
+  - [ESLint](#eslint)
+  - [Jest](#jest)
+  - [Commit message proposal](#commit-message-proposal)
+  - [Local workflow control with git hooks](#local-workflow-control-with-git-hooks)
+  - [Remote workflow control with github actions](#remote-workflow-control-with-github-actions)
+  - [Dependabot](#dependabot)
+  - [VS Code settings](#vs-code-settings)
+
 ### Yarn
 
 This repository uses [yarn](https://yarnpkg.com/) as its package manager. It is just a personal flavour.
