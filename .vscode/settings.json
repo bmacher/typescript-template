@@ -1,7 +1,8 @@
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    "source.organizeImports": true
+    # TODO: Trailing commas are removed on save somehow.
+    "source.organizeImports": false
   },
   "files.eol": "\n",
   "files.exclude": {
