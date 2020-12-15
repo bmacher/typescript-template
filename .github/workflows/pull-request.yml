@@ -6,7 +6,7 @@ on:
     branches: [master]
 
 jobs:
-  node-ci-on-pr:
+  on-pr:
     runs-on: ubuntu-latest
 
     steps:
