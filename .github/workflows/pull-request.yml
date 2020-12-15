@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies and run eslint and jest on the code.
-name: Node CI
+name: Pull Request
 
 on:
-  push:
+  pull_request:
     branches: [master]
 
 jobs:
-  node-ci:
+  on-pr:
     runs-on: ubuntu-latest
 
     steps:
