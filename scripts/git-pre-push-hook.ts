@@ -12,7 +12,7 @@
 import { resolve } from 'path';
 import { readFileSync } from 'fs';
 import * as shell from 'shelljs';
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 // Ignore: Could not find a declaration file for module 'eslint'.
 // To avoid extra devDependvies for scripts.
 // @ts-expect-error

@@ -8,7 +8,7 @@
 
 import { resolve } from 'path';
 import * as shell from 'shelljs';
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 const { info, error } = console;
 const blankLine = () => info();
