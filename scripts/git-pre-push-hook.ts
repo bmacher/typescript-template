@@ -1,21 +1,15 @@
 /**
- * @author Benjamin Macher
  * @description Script is executed before 'git push' and prevents:
  *   - pushing to master branch
  *   - pushing with ESLint errors
  *   - pushing with failing jest tests
- *
- * @license MIT
- * @copyright by Benjamin Macher 2020
+ *   - except pushing a wip commit
  */
 
 import { resolve } from 'path';
-import { readFileSync } from 'fs';
+// import { readFileSync } from 'fs';
 import * as shell from 'shelljs';
-import chalk from 'chalk';
-// Ignore: Could not find a declaration file for module 'eslint'.
-// To avoid extra devDependvies for scripts.
-// @ts-expect-error
+import * as chalk from 'chalk';
 import * as eslint from 'eslint';
 import * as jest from 'jest';
 
@@ -29,7 +23,7 @@ const rootPath = resolve(__dirname, '..');
 
 // Need to wrap whole hook into function to get async/await
 async function gitPrePushHook() {
-  // #region Prevent pushing to master
+  /* // #region Prevent pushing to master
   info('Checking for current branch');
 
   // Can not use 'git branch --show-current' as it prints to stdout
@@ -50,7 +44,7 @@ async function gitPrePushHook() {
 
   info('✅ Branch is not master');
   blankLine();
-  // #endregion
+  // #endregion */
 
   // Only run ESLint and Jest when last commit is none wip
   const wipCommitRE = /^(revert: )?wip/;
@@ -69,7 +63,7 @@ async function gitPrePushHook() {
 
     const lintResult = await linter
       .lintFiles(rootPath)
-      .catch((err: Error) => {
+      .catch((err) => {
         error(err);
         blankLine();
         error(chalk.red('Executing eslint failed. Make sure that it runs properly!'));
@@ -80,7 +74,7 @@ async function gitPrePushHook() {
       });
 
     const filesWithError = lintResult
-      .filter(({ errorCount }: { errorCount: number }) => errorCount > 0)
+      .filter(({ errorCount }) => errorCount > 0)
       .length;
 
     if (filesWithError > 0) {
@@ -99,7 +93,7 @@ async function gitPrePushHook() {
 
     // #region Prevent pushing with jest failing tests
     info('Running tests');
-    await jest.run(['--silent']).catch((err) => {
+    await jest.run(['--silent', '--detectOpenHandles']).catch((err) => {
       error(err);
       blankLine();
       error(chalk.red('Executing jest failed. Make sure that it runs properly!'));
@@ -112,6 +106,18 @@ async function gitPrePushHook() {
     info('✅ All tests succeeded');
     blankLine();
     // #endregion
+
+    // #region Prevent pushing when 'tsc' fails
+    info('Compiling the code');
+    const { code: codeFromTsc } = shell.exec('npx tsc -p tsconfig.build.json');
+
+    if (codeFromTsc !== 0) {
+      throw new Error('Compiling the code failed');
+    }
+
+    info('✅ TSC succeeded');
+    blankLine();
+    // #endregion
   } else {
     // We got work in progress commit
     const warnMsg = 'Warning! You are pushing a work in progress commit!\n'
@@ -120,6 +126,7 @@ async function gitPrePushHook() {
 
     console.warn(chalk.keyword('orange')(warnMsg));
     blankLine();
+    // #endregion
   }
 }
 
