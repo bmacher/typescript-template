@@ -86,6 +86,20 @@ module.exports = {
       { selector: 'ForInStatement' },
       { selector: 'ForOfStatement' },
     ],
+    
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
+      {
+        'multiline': {
+          'delimiter': 'semi',
+          'requireLast': true
+        },
+        'singleline': {
+          'delimiter': 'semi',
+          'requireLast': true
+        }
+      },
+    ],
 
     '@typescript-eslint/naming-convention': [
       'error',
