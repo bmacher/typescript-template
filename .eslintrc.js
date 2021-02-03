@@ -72,6 +72,8 @@ module.exports = {
     // Default exports can lead to different names in import
     // whereas import with destructuring not.
     'import/prefer-default-export': 'off',
+    
+    'max-params': ["error", 3],
 
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-continue': 'off',
