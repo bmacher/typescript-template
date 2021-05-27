@@ -19,7 +19,7 @@
     "test:clean": "rm -rf coverage"
   },
   "devDependencies": {
-    "@jest/globals": "^26.6.2",
+    "@jest/globals": "^27.0.1",
     "@types/eslint": "^7.2.12",
     "@types/node": "^15.6.1",
     "@types/shelljs": "^0.8.8",
