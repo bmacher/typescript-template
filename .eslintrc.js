@@ -116,6 +116,32 @@ module.exports = {
           match: true,
         },
       },
+      {
+        selector: 'class',
+        format: ['PascalCase']
+      },
+      {
+        selector: 'enum',
+        format: ['PascalCase']
+      },
+      {
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'forbid',
+      },
+      {
+        selector: 'function',
+        format: ['camelCase']
+      },
+      {
+        selector: 'classProperty',
+        format: ['camelCase']
+      },
+      {
+        selector: 'objectLiteralProperty',
+        format: ['camelCase']
+      },
     ],
   },
   overrides: [
