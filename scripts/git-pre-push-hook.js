@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const chalk = require('chalk');
-const { resolve } = require('path');
+// const { resolve } = require('path');
 const shell = require('shelljs');
 
 const tasks = [
-  { name: 'ESLint', task: 'npx eslint' },
+  { name: 'ESLint', task: 'npx eslint .' },
   { name: 'Tests', task: 'npx jest' },
   { name: 'Build', task: 'npx tsc --project tsconfig.build.json' },
 ];

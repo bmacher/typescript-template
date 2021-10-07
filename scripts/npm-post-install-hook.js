@@ -66,6 +66,6 @@ toBeInstalledHooks.forEach((hook) => {
   }
 });
 
-toBeInstalledHooks.length > 0 && blankLine();
+if (toBeInstalledHooks.length > 0) blankLine();
 
 info('✅ Done!');
