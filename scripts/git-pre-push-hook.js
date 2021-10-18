@@ -75,8 +75,10 @@ if (!wipCommitRE.test(msgOfLastCommit)) {
   tasks.forEach(({ task, name }) => execTask(task, name));
 } else {
   // We got work in progress commit
-  const warnMsg = 'Warning! You are pushing a work in progress commit!\n'
-      + 'Neither ESLint, Jest nor CDK List or TSC are executed and therefore\n'
+  const executedTasks = tasks.map(({ name }) => name);
+  const lastExecutedTask = executedTasks.pop();
+  const warnMsg = `${'Warning! You are pushing a work in progress commit!\n'
+      + 'Neither '}${executedTasks.join(', ')} or ${lastExecutedTask} are executed and therefore\n`
       + 'the current codebase may be corrupted.';
 
   console.warn(chalk.keyword('orange')(warnMsg));
