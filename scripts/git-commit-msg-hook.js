@@ -1,27 +1,20 @@
-/**
- * @author Benjamin Macher
- * @description Script verifies commit messages.
- *
- * @license MIT
- * @copyright by Benjamin Macher 2020
- */
-
-import { readFileSync } from 'fs';
-import { resolve } from 'path';
-import chalk from 'chalk';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const chalk = require('chalk');
+const { readFileSync } = require('fs');
+const { resolve } = require('path');
 
 const { info, error } = console;
 const blankLine = () => info();
 
 blankLine();
-info('>> commit-msg hook');
+info(chalk.blue('>> commit-msg hook'));
 
 const rootPath = resolve(__dirname, '..');
 const maxMsgLength = 50;
 const commitRE = new RegExp(`^(revert: )?(feat|fix|docs|refactor|test|chore|wip|style|tooling)(\\(.+\\))?: .{1,${maxMsgLength}}`);
 
-// First two arguments are path to ts-node and path to script
-const [,,msgPath] = process.argv;
+// First two arguments are path to node and path to script
+const [,, msgPath] = process.argv;
 const msg = readFileSync(resolve(rootPath, msgPath))
   .toString()
   .trim();

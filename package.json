@@ -7,7 +7,7 @@
   "author": "Benjamin Macher",
   "license": "MIT",
   "scripts": {
-    "postinstall": "ts-node scripts/npm-post-install-hook.ts",
+    "postinstall": "ts-node scripts/npm-post-install-hook.js",
     "start": "ts-node src/index.ts",
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
@@ -19,9 +19,9 @@
     "test:clean": "rm -rf coverage"
   },
   "devDependencies": {
-    "@jest/globals": "^27.2.3",
+    "@jest/globals": "^27.2.4",
     "@types/eslint": "^7.28.0",
-    "@types/node": "^16.10.1",
+    "@types/node": "^16.10.2",
     "@types/shelljs": "^0.8.9",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",

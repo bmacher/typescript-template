@@ -146,7 +146,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: 'scripts/**/*.ts',
+      files: 'scripts/**/*.js',
       rules: {
         // To import dev dependencies in scripts/*
         'import/no-extraneous-dependencies': 'off',
