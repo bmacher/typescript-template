@@ -70,7 +70,7 @@ yarn remove jest @jest/globals ts-jest
 
 ### Commit message proposal
 
-There is a good commit convention created by Vue ([Link](https://github.com/vuejs/vue-next/blob/master/.github/commit-convention.md)), that has been adapted for this repository (see [commit-convention.md](.github/commit-convention.md)).
+There is a good commit convention created by Vue ([Link](https://github.com/vuejs/vue-next/blob/master/.github/commit-convention.md)), that has been adapted for this repository (see [COMMIT_CONVENTION.md](.github/COMMIT_CONVENTION.md)).
 
 ### Local workflow control with git hooks
 
