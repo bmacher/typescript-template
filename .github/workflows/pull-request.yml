@@ -1,4 +1,3 @@
-# This workflow will do a clean install of node dependencies and run eslint and jest on the code.
 name: Pull Request
 
 on:
