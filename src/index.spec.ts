@@ -1,7 +1,7 @@
 import { sayHelloWorld } from './index';
 
 describe('sayHelloWorld', () => {
-  it('should be definend', () => {
+  it('should be defined', () => {
     expect(sayHelloWorld).toBeDefined();
   });
 
