@@ -3,7 +3,7 @@
  * @description Jest config for TypeScript projects.
  *
  * @dependencies
- * yarn add --dev jest @jest/globals ts-jest
+ * yarn add --dev jest @types/jest ts-jest
  *
  * @commands
  * package.json

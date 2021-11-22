@@ -25,7 +25,8 @@
       "node_modules/@types"
     ],
     "types": [
-      "node"
+      "node",
+      "jest"
     ],
     "charset": "utf8",
     "esModuleInterop": true,
