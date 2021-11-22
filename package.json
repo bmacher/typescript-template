@@ -11,6 +11,8 @@
     "start": "ts-node src/index.ts",
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
+    "check:all": "yarn lint && yarn test:verbose && yarn build",
+    "check:types": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest",
