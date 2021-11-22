@@ -21,7 +21,7 @@
     "test:clean": "rm -rf coverage"
   },
   "devDependencies": {
-    "@types/eslint": "^7.28.2",
+    "@types/eslint": "^8.2.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.6",
     "@types/shelljs": "^0.8.9",
