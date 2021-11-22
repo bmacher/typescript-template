@@ -8,8 +8,8 @@
 
 **Type of change**
 
-- [ ] Bugfix
 - [ ] Feature
+- [ ] Bugfix
 - [ ] Code style update
 - [ ] Refactor
 - [ ] Build-related changes
