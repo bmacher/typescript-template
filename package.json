@@ -21,6 +21,7 @@
     "test:clean": "rm -rf coverage"
   },
   "devDependencies": {
+    "@bmacher/eslint-config-typescript": "^1.0.1",
     "@types/eslint": "^8.2.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.9",
