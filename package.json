@@ -24,7 +24,7 @@
     "@bmacher/eslint-config-typescript": "^1.0.1",
     "@types/eslint": "^8.2.0",
     "@types/jest": "^27.0.3",
-    "@types/node": "^16.11.9",
+    "@types/node": "^16.11.11",
     "@types/shelljs": "^0.8.9",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
