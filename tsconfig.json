@@ -19,7 +19,6 @@
     "alwaysStrict": true,
     /* Module Resolution Options */
     "moduleResolution": "node",
-    "baseUrl": ".",
     "paths": {},
     "typeRoots": [
       "node_modules/@types"
