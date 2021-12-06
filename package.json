@@ -7,7 +7,7 @@
   "author": "Benjamin Macher",
   "license": "MIT",
   "scripts": {
-    "postinstall": "ts-node scripts/npm-post-install-hook.js",
+    "postinstall": "node scripts/npm-post-install-hook.js",
     "start": "ts-node src/index.ts",
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
