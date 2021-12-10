@@ -1,5 +1,5 @@
-[![CI](https://github.com/bmacher/typescript-template/workflows/CI/badge.svg)](https://github.com/bmacher/typescript-template/actions?query=workflow%3A%22CI%22)
-[![GitHub license](https://img.shields.io/github/license/bmacher/typescript-template.svg)](https://github.com/bmacher/typescript-template/blob/master/LICENSE)
+[![ci](https://github.com/bmacher/typescript-template/actions/workflows/ci.yml/badge.svg)](https://github.com/bmacher/typescript-template/actions/workflows/ci.yml)
+[![pr](https://github.com/bmacher/typescript-template/actions/workflows/pr.yml/badge.svg)](https://github.com/bmacher/typescript-template/actions/workflows/pr.yml)
 [![Dependabot Enabled](https://api.dependabot.com/badges/status?host=github&repo=bmacher/typescript-template)](https://github.com/bmacher/typescript-template/network/updates)
 
 (&uarr; Adapt path to your repository!)
