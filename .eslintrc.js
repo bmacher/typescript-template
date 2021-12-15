@@ -3,8 +3,8 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  
+
   extends: [
-    "@bmacher/eslint-config-typescript"
-  ]
+    '@bmacher/eslint-config-typescript',
+  ],
 };
