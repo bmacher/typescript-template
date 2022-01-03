@@ -3,4 +3,5 @@ module.exports = {
   rules: {
     'type-enum': [2, 'always', ['feat', 'fix', 'docs', 'refactor', 'test', 'chore', 'wip', 'style', 'tooling', 'revert']],
   },
+  'body-max-line-length': 150,
 };
