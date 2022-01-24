@@ -21,7 +21,7 @@
     "test:clean": "rm -rf coverage"
   },
   "devDependencies": {
-    "@bmacher/eslint-config-typescript": "^1.0.1",
+    "@bmacher/eslint-config-typescript": "^1.0.2",
     "@commitlint/cli": "^16.0.1",
     "@commitlint/config-conventional": "^16.0.0",
     "@types/eslint": "^8.2.1",

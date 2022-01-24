@@ -292,10 +292,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bmacher/eslint-config-typescript@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@bmacher/eslint-config-typescript/-/eslint-config-typescript-1.0.1.tgz#c2ee12ea82240fe3236a80249dfcd976b1efa733"
-  integrity sha512-vXuV/njf4KUYjidRUgJKXhhv0UJAwsWa2LMp24jHT830gX6MX7ETdauoNK3IrVVRx+Y6CnRmuH6u0YOKKlmI5A==
+"@bmacher/eslint-config-typescript@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@bmacher/eslint-config-typescript/-/eslint-config-typescript-1.0.2.tgz#2246a138ef670e41be7b60f45c5d34866c454db5"
+  integrity sha512-+VZS1UV1UYKNYLLAmR1REhp7xNggaMf3OR3dx6+Qnfq5vdbO8VX5+V5FdtyPBJloKnaM55oUIV9ceslzitKvvg==
   dependencies:
     eslint-config-airbnb-typescript "^12.3.1"
 
