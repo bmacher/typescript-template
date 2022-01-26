@@ -6,8 +6,8 @@
     "allowJs": false,
     "checkJs": false,
     "resolveJsonModule": true,
-    "inlineSourceMap": true,
     "newLine": "lf",
+    "charset": "utf8",
     /* Strict Type-Checking Options */
     "strict": true,
     "noImplicitAny": true,
@@ -18,6 +18,7 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     /* Module Resolution Options */
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "paths": {},
     "typeRoots": [
@@ -27,9 +28,8 @@
       "node",
       "jest"
     ],
-    "charset": "utf8",
-    "esModuleInterop": true,
     /* Source Map Options */
+    "inlineSourceMap": true,
     "inlineSources": true
   },
   "include": [
