@@ -25,7 +25,7 @@ const execTask = (task, name) => {
   if (code !== 0) {
     blankLine();
     error(chalk.red(`❌ ${name} failed`));
-    shell.exec(1);
+    shell.exit(1);
   }
 
   info(`✅ ${name} succeeded`);
