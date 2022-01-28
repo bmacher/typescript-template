@@ -18,7 +18,7 @@ const blankLine = () => info();
  * @returns {void}
  */
 const execTask = (task, name) => {
-  info(`Running ${name}`);
+  info(`=> Running ${name}`);
 
   const { code } = shell.exec(task);
 
@@ -34,7 +34,7 @@ const execTask = (task, name) => {
 
 // #region MAIN
 blankLine();
-info(chalk.blue('>> pre-push hook'));
+info(chalk.blue('⚙️  pre-push hook'));
 
 /* const rootPath = resolve(__dirname, '..');
 

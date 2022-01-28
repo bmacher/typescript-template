@@ -5,7 +5,7 @@ const { info, error } = console;
 const blankLine = () => info();
 
 blankLine();
-info(chalk.blue('commit-msg hook'));
+info(chalk.blue('⚙️  commit-msg hook'));
 info('=> Verifying commit message');
 
 shell.config.silent = true;
@@ -22,5 +22,5 @@ if (shell.exec('yarn commitlint --edit').code !== 0) {
   shell.exit(1);
 }
 
-info('✅ Valid message format');
+info(chalk.green('✅ Valid message format'));
 blankLine();
