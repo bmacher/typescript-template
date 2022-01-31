@@ -33,7 +33,7 @@ How to remove:
 
 ### ESLint
 
-[ESLint](https://eslint.org/) is used as the linting tool to keep a good code style. It extends the rule set of AirBnB (`airbnb-typescript/base`) with some own rules.
+[ESLint](https://eslint.org/) is used as the linting tool to keep a good code style. 
 
 How to remove:
 
@@ -44,6 +44,7 @@ How to remove:
 ```sh
 yarn remove \
   eslint \
+  @bmacher/eslint-config-typescript \
   @typescript-eslint/eslint-plugin \
   @typescript-eslint/parser \
   eslint-config-airbnb-typescript \
@@ -55,7 +56,7 @@ yarn remove \
 
 ### Jest
 
-[Jest](https://jestjs.io/) is used as the test runner. It is not integrated via `@types/jest` so that TypeScript magically knows `describe`, `it`, etc. but it uses [@jest/globals](https://jestjs.io/docs/en/api) and imports the needed utilities from there.
+[Jest](https://jestjs.io/) is used as the test runner.
 
 How to remove:
 
@@ -64,12 +65,20 @@ How to remove:
   - delete dependencies:
 
 ```sh
-yarn remove jest @jest/globals ts-jest
+yarn remove jest @jest/types ts-jest
 ```
 
 ### Commit message proposal
 
-There is a good commit convention created by Vue ([Link](https://github.com/vuejs/vue-next/blob/master/.github/commit-convention.md)), that has been adapted for this repository (see [COMMIT_CONVENTION.md](.github/COMMIT_CONVENTION.md)).
+There is a good commit convention created by Vue ([Link](https://github.com/vuejs/vue-next/blob/master/.github/commit-convention.md)), that has been adapted for this repository (see [COMMIT_CONVENTION.md](.github/COMMIT_CONVENTION.md)). It is utilized by using `commitlint`.
+
+How to remove:
+
+  - delete `commitlint.config.js`
+
+```sh
+yarn remove @commitlint/cli @commitlint/config-conventional
+```
 
 ### Local workflow control with git hooks
 
@@ -89,14 +98,14 @@ yarn remove shelljs @types/shelljs chalk
 
 ### Remote workflow control with github actions
 
-There is a github workflow in place that runs ESLint and Jest on pull requests (see [node-ci-yml](.github/workflows/node-ci.yml)). To make the master save from commits that fail on ESLint or/and Jest, go to: Settings (Repo) &rarr; Branch &rarr; Add rule and 
+There are a github workflow in place that run ESLint, Jest, `tsc` and Commitlint on pushes to `master` and pull requests (e.g. see [ci.yml](.github/workflows/ci.yml)). To make the master save go to: Settings (Repo) &rarr; Branch &rarr; Add rule and 
   
   - add "master" in *Branch name pattern*
   - activate *Require status checks to pass before merging*
     - Activate *lint-and-test* (The action must have been executed once)
   - (activate *Include administrators* to be extra save)
 
-There is also a badge that shows the status for the worklow (see line 1).
+There is also a badge that shows the status of the workflow (see line 1).
 
 How to remove:
   - delete `.github/workflows/node-ci-yml`
