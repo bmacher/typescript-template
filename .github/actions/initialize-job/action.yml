@@ -1,10 +1,9 @@
-name: "Install dependencies"
-description: "All steps to restore dependencies from cache and run `yarn install`"
+name: Initialize job
+description: Initialization of a job (set Node env, restore cached deps, install deps, ...).
+
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v2
-
     - name: Use Node.js 14.x
       uses: actions/setup-node@v1
       with:

@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies
-        uses: ./.github/actions/install-dependencies
+      - name: Initialize job
+        uses: ./.github/actions/initialize-job
 
       - name: Lint
         run: yarn lint
