@@ -10,9 +10,10 @@
 
 - [ ] Feature
 - [ ] Bugfix
-- [ ] Code style update
 - [ ] Refactor
+- [ ] Test
 - [ ] Build-related changes
+- [ ] Tooling
 - [ ] Documentation update
 - [ ] Other, please describe:
 
