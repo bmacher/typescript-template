@@ -6,6 +6,19 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
+  add-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TimonVS/pr-labeler-action@v3
+        with:
+          configuration-path: .github/labels/types.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/labeler@v3
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/labels/packages.yml
+
   lint:
     runs-on: ubuntu-latest
     steps:
