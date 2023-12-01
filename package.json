@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@bmacher/eslint-config-typescript": "^1.1.0",
-    "@commitlint/cli": "^18.2.0",
+    "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@types/eslint": "^8.4.1",
     "@types/jest": "^27.4.1",
