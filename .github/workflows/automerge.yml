@@ -20,6 +20,8 @@ on:
 jobs:
   automerge:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - id: automerge
         name: automerge
@@ -27,3 +29,5 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_METHOD: "rebase"
+          MERGE_RETRIES: "360"
+          MERGE_RETRY_SLEEP: "10000"
